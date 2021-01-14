@@ -34,8 +34,8 @@
 
                 <div style="color:white; font-size:100px; margin-left:550px;">
                     <?php 
-                        if($_GET['check']=='on') {
-                            $REQ= $_GET['req'];
+                        if($_GET['check'] == 'on'){
+                            $REQ = $_GET['req'];
                             echo $REQ;
                         } 
                     ?>
