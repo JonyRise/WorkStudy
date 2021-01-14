@@ -11,7 +11,10 @@
         <h1 style="color :white; margin-left:500px;">
 
             <a style="text-decoration:none; color:wheat;" 
-            href="https://metanit.com/sharp/tutorial/1.1.php">Поле регистрации</a>
+               href="https://metanit.com/sharp/tutorial/1.1.php"
+            >
+                Поле регистрации
+            </a>
 
         </h1>
              <form action="Get.php" method="POST">

@@ -22,11 +22,11 @@
             $pass = "default";
             $login = "NAN";
             if(isset($_POST['login']) && isset($_POST['password'])){
-                if( $_POST['login']){
-                     $login= htmlentities( $_POST['login']);
+                if($_POST['login']){
+                     $login = htmlentities( $_POST['login']);
                 }
                 if($_POST['password']){
-                     $pass= htmlentities($_POST['password']);
+                     $pass = htmlentities($_POST['password']);
                 } 
     
             }else{
@@ -43,7 +43,7 @@
         </form>
     </div>
 
-    <img src="imm.jpg" style="height: 200px; width:auto;" alt="Trees;">
+    <img src="imm.jpg" style="height: 200px; width:auto;" alt="Trees">
 
 
     <table style="margin-left: 100px;">
@@ -78,7 +78,7 @@
 
     <table background="imm.jpg" style="margin-left:50px; color:white;">
 
-        <tr >
+        <tr>
             <th >Модель</th>
             <th>Производитель</th>
             <th>Цена</th>
