@@ -3,10 +3,12 @@
 <head>
     <style>
         table {
-        border:1px solid black;  
-        border-spacing: 0px;
-        } td,th{border:solid 1px black}
-    
+            border: 1px solid black;  
+            border-spacing: 0px;
+        } 
+        td, th {
+            border: solid 1px black;
+        }
     </style>
 
     <meta charset="UTF-8">
@@ -17,16 +19,15 @@
 <body style="display:flex">
     <div style="background-color:antiquewhite;">
         <?php  
-            $pass="default";
-            $login="NAN";
-             if(isset($_POST['login'])  && isset($_POST['password'] ))
-                {
-                    if( $_POST['login']!=null){$login=htmlentities( $_POST['login']);}
-                    if($_POST['password']!=null){$pass= htmlentities($_POST['password']);} 
+            $pass= "default";
+            $login= "NAN";
+            if(isset($_POST['login']) && isset($_POST['password'])){
+                if( $_POST['login']){$login= htmlentities( $_POST['login']);}
+                if($_POST['password']){$pass= htmlentities($_POST['password']);} 
     
-                }else {echo "NAN";}
+            }else {echo "NAN";}
 
-                echo "<h3>your login: $login <br><br>your password: $pass <br></h3>";
+            echo "<h3>your login:  $login <br>your password: $pass </h3>";
         ?>
 
         <form action="index.php" method="GET">
@@ -36,10 +37,10 @@
         </form>
     </div>
 
-    <img src="imm.jpg" style="height: 200px; width:auto;" alt="Trees">
+    <img src="imm.jpg" style="height: 200px; width:auto;" alt="Trees;">
 
 
-    <table  style="margin-left: 100px;">
+    <table style="margin-left: 100px;">
         <th colspan="4">Table</th>
      
         <tr>
@@ -60,7 +61,7 @@
 
     </table>   
 
-    <table background="imm.jpg" style="margin-left:50px;color:white;">
+    <table background="imm.jpg" style="margin-left:50px; color:white;">
 
             <tr ><th >Модель</th><th>Производитель</th><th>Цена</th></tr>
             <tr><td>Lumia 950</td><td>Microsoft</td><td>29900</td></tr>
