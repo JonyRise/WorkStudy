@@ -46,8 +46,8 @@ function PrintDeck($deck)
 
 function Game($deck_card = [null], Player $first, Player $second)
 {
-    $player1_score = 0;
-    $player2_score = 0;
+    /* $player1_score = 0;
+    $player2_score = 0; */
 
     while (count($first->cardarr) < 5 || count($second->cardarr) < 5) {
         $player1_score = 0;
@@ -81,17 +81,19 @@ function Game($deck_card = [null], Player $first, Player $second)
             echo "<h4>Second player cards:</h4>", PrintDeck($second->cardarr);
             return;
         }
-    }
     
-    if ($player1_score > $player2_score) {
-        echo "<h3>First player WIN!</h3>";
-    } elseif ($player1_score < $player2_score) {
-        echo "<h3>Second player WIN!</h3>";
-    } else {
-        echo "Equal score<br>";
+        if (count($first->cardarr) == 5 && count($second->cardarr) == 5) {
+            if ($player1_score > $player2_score) {
+                echo "<h3>First player WIN!</h3>";
+            } elseif ($player1_score < $player2_score) {
+                echo "<h3>Second player WIN!</h3>";
+            } else {
+                echo "Equal score<br>";
+            }
+            echo " <h4>firstplayer: $player1_score</h4><br>", PrintDeck($first->cardarr) . "<br>" . 
+                "<h4>secondplayer: $player2_score</h4><br>", PrintDeck($second->cardarr) . "<br>";
+        }
     }
-    echo " <h4>firstplayer: $player1_score <br>", PrintDeck($first->cardarr) . "</h4>" . 
-        "<h4>secondplayer: $player2_score<br>", PrintDeck($second->cardarr) . "</h4>";
 }
 ///////////////////////////////////////////////////////////////////////////
                                 //Prog//
